@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        FinTrack - Reports
+    </title>
+
+    <link rel="stylesheet"
+          href="/css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>💰 FinTrack</h2>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+
+                <a href="index.html">
+
+                    <i class="fas fa-chart-line"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="profile.html">
+
+                    <i class="fas fa-user"></i>
+
+                    <span>Profile</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="reports.html"
+                   class="active">
+
+                    <i class="fas fa-file-alt"></i>
+
+                    <span>Reports</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="settings.html">
+
+                    <i class="fas fa-cog"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main-content">
+
+        <div class="topbar">
+
+            <h1>
+
+                Financial Reports
+
+            </h1>
+
+        </div>
+
+        <!-- Report Summary -->
+
+        <div class="report-grid">
+
+            <div class="report-card">
+
+                <h3>
+
+                    Total Income
+
+                </h3>
+
+                <p id="reportIncome">
+
+                    ₹0
+
+                </p>
+
+            </div>
+
+            <div class="report-card">
+
+                <h3>
+
+                    Total Expense
+
+                </h3>
+
+                <p id="reportExpense">
+
+                    ₹0
+
+                </p>
+
+            </div>
+
+            <div class="report-card">
+
+                <h3>
+
+                    Net Savings
+
+                </h3>
+
+                <p id="reportSavings">
+
+                    ₹0
+
+                </p>
+
+            </div>
+
+            <div class="report-card">
+
+                <h3>
+
+                    Total Transactions
+
+                </h3>
+
+                <p id="reportTransactions">
+
+                    0
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Export Buttons -->
+
+        <div class="export-actions">
+
+            <button
+            id="exportCSV"
+            class="export-btn export-csv">
+
+                <i class="fas fa-file-csv"></i>
+
+                Export CSV
+
+            </button>
+
+            <button
+            id="exportPDF"
+            class="export-btn export-pdf">
+
+                <i class="fas fa-file-pdf"></i>
+
+                Export PDF
+
+            </button>
+
+            <button
+            id="printReport"
+            class="export-btn export-print">
+
+                <i class="fas fa-print"></i>
+
+                Print
+
+            </button>
+
+        </div>
+
+        <!-- Charts -->
+
+        <div class="content-grid">
+
+            <div class="chart-section">
+
+                <div class="chart-header">
+
+                    <h2>
+
+                        Income vs Expense
+
+                    </h2>
+
+                </div>
+
+                <div class="chart-container">
+
+                    <canvas id="incomeExpenseChart">
+
+                    </canvas>
+
+                </div>
+
+            </div>
+
+            <div class="chart-section">
+
+                <div class="chart-header">
+
+                    <h2>
+
+                        Category Breakdown
+
+                    </h2>
+
+                </div>
+
+                <div class="chart-container">
+
+                    <canvas id="categoryChart">
+
+                    </canvas>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Monthly Trends -->
+
+        <div class="chart-section">
+
+            <div class="chart-header">
+
+                <h2>
+
+                    Monthly Trend Analysis
+
+                </h2>
+
+            </div>
+
+            <div class="chart-container">
+
+                <canvas id="monthlyTrendChart">
+
+                </canvas>
+
+            </div>
+
+        </div>
+
+        <!-- Reports Table -->
+
+        <div class="report-section">
+
+            <h2>
+
+                Detailed Transactions Report
+
+            </h2>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="reportTableBody">
+
+                        <tr>
+
+                            <td colspan="6">
+
+                                <div class="no-data">
+
+                                    <i class="fas fa-file-alt"></i>
+
+                                    <h3>
+
+                                        No Reports Available
+
+                                    </h3>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- Analytics -->
+
+        <div class="analytics-grid">
+
+            <div class="analytics-card">
+
+                <h4>
+
+                    Highest Income
+
+                </h4>
+
+                <h2 id="highestIncome">
+
+                    ₹0
+
+                </h2>
+
+            </div>
+
+            <div class="analytics-card">
+
+                <h4>
+
+                    Highest Expense
+
+                </h4>
+
+                <h2 id="highestExpense">
+
+                    ₹0
+
+                </h2>
+
+            </div>
+
+            <div class="analytics-card">
+
+                <h4>
+
+                    Average Expense
+
+                </h4>
+
+                <h2 id="averageExpense">
+
+                    ₹0
+
+                </h2>
+
+            </div>
+
+            <div class="analytics-card">
+
+                <h4>
+
+                    Savings Rate
+
+                </h4>
+
+                <h2 id="savingsRate">
+
+                    0%
+
+                </h2>
+
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+
+        <footer
+        style="
+        text-align:center;
+        margin-top:40px;
+        color:#6b7280;
+        padding:20px;">
+
+            © 2026 FinTrack Reports
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="/javascript/app.js"></script>
+
+<script src="/javascript/report.js"></script>
+
+</body>
+</html>

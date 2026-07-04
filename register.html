@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FinTrack | Register</title>
+
+    <!-- AUTH CSS -->
+
+    <link rel="stylesheet"
+          href="/css/auth.css">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <!-- LEFT PANEL -->
+
+    <div class="auth-left">
+
+        <div class="brand">
+
+            <h1>💰 FinTrack</h1>
+
+            <p>
+
+                Create your account and start
+                managing your finances like a pro.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+
+    <div class="auth-right">
+
+        <div class="auth-card">
+
+            <h2>Create Account</h2>
+
+            <p>
+
+                Join FinTrack today
+
+            </p>
+
+            <!-- ALERT -->
+
+            <div
+            id="alertBox"
+            class="alert">
+
+            </div>
+
+            <!-- REGISTER FORM -->
+
+            <form id="registerForm">
+
+                <!-- FULL NAME -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Full Name
+
+                    </label>
+
+                    <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Enter Full Name"
+                    required>
+
+                </div>
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Email Address
+
+                    </label>
+
+                    <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Enter Email"
+                    required>
+
+                </div>
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Password
+
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Create Password"
+                        required>
+
+                        <i
+                        id="togglePassword"
+                        class="fa-solid fa-eye">
+                        </i>
+
+                    </div>
+
+                </div>
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Confirm Password
+
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm Password"
+                        required>
+
+                        <i
+                        id="toggleConfirmPassword"
+                        class="fa-solid fa-eye">
+                        </i>
+
+                    </div>
+
+                </div>
+
+                <!-- TERMS -->
+
+                <div class="options">
+
+                    <label>
+
+                        <input
+                        type="checkbox"
+                        id="agreeTerms"
+                        required>
+
+                        I agree to the
+                        Terms & Conditions
+
+                    </label>
+
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+
+                <button
+                type="submit"
+                class="auth-btn">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+            <!-- DIVIDER -->
+
+            <div class="divider">
+
+                <span>
+
+                    OR
+
+                </span>
+
+            </div>
+
+            <!-- GOOGLE BUTTON -->
+
+            <button
+            type="button"
+            class="google-btn">
+
+                <i class="fab fa-google"></i>
+
+                Continue with Google
+
+            </button>
+
+            <!-- LOGIN LINK -->
+
+            <div class="bottom-text">
+
+                Already have an account?
+
+                <a href="login.html">
+
+                    Login
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- AUTH JS -->
+
+<script src="/javascript/auth.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FinTrack - Settings</title>
+
+    <link rel="stylesheet"
+          href="/css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>💰 FinTrack</h2>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-chart-line"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    <i class="fas fa-user"></i>
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="reports.html">
+                    <i class="fas fa-file-alt"></i>
+                    Reports
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html" class="active">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <div class="topbar">
+
+            <h1>
+
+                Settings
+
+            </h1>
+
+        </div>
+
+        <!-- Appearance Settings -->
+
+        <div class="section-box">
+
+            <h2>
+
+                Appearance
+
+            </h2>
+
+            <div class="setting-item">
+
+                <label>
+
+                    Dark Mode
+
+                </label>
+
+                <button
+                id="darkModeBtn"
+                class="btn btn-primary">
+
+                    Toggle Dark Mode
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Currency -->
+
+        <div class="section-box">
+
+            <h2>
+
+                Currency Settings
+
+            </h2>
+
+            <div class="setting-item">
+
+                <label>
+
+                    Default Currency
+
+                </label>
+
+                <select id="currencySelect">
+
+                    <option value="INR">
+
+                        INR (₹)
+
+                    </option>
+
+                    <option value="USD">
+
+                        USD ($)
+
+                    </option>
+
+                    <option value="EUR">
+
+                        EUR (€)
+
+                    </option>
+
+                    <option value="GBP">
+
+                        GBP (£)
+
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <!-- Notifications -->
+
+        <div class="section-box">
+
+            <h2>
+
+                Notifications
+
+            </h2>
+
+            <div class="setting-item">
+
+                <label>
+
+                    Enable Notifications
+
+                </label>
+
+                <input
+                type="checkbox"
+                id="notificationToggle"
+                checked>
+
+            </div>
+
+        </div>
+
+        <!-- Profile Preferences -->
+
+        <div class="section-box">
+
+            <h2>
+
+                User Preferences
+
+            </h2>
+
+            <div class="setting-item">
+
+                <label>
+
+                    Full Name
+
+                </label>
+
+                <input
+                type="text"
+                id="userName"
+                placeholder="Enter Name">
+
+            </div>
+
+            <div class="setting-item">
+
+                <label>
+
+                    Email
+
+                </label>
+
+                <input
+                type="email"
+                id="userEmail"
+                placeholder="Enter Email">
+
+            </div>
+
+            <button
+            class="btn btn-success"
+            id="saveProfileSettings">
+
+                Save Preferences
+
+            </button>
+
+        </div>
+
+        <!-- Security -->
+
+        <div class="section-box">
+
+            <h2>
+
+                Security
+
+            </h2>
+
+            <button
+            class="btn btn-warning">
+
+                Change Password
+
+            </button>
+
+            <button
+            class="btn btn-primary">
+
+                Enable 2FA
+
+            </button>
+
+        </div>
+
+        <!-- Data Management -->
+
+        <div class="section-box">
+
+            <h2>
+
+                Data Management
+
+            </h2>
+
+            <button
+            class="btn btn-danger"
+            id="clearTransactions">
+
+                Clear Transactions
+
+            </button>
+
+            <button
+            class="btn btn-danger"
+            id="resetAllData">
+
+                Reset Entire App
+
+            </button>
+
+        </div>
+
+        <!-- App Info -->
+
+        <div class="section-box">
+
+            <h2>
+
+                Application Information
+
+            </h2>
+
+            <p>
+
+                Version: 2.0
+
+            </p>
+
+            <p>
+
+                FinTrack Personal Finance Dashboard
+
+            </p>
+
+            <p>
+
+                Built with HTML, CSS, JavaScript & Chart.js
+
+            </p>
+
+        </div>
+
+        <!-- Footer -->
+
+        <footer
+        style="
+        text-align:center;
+        margin-top:40px;
+        padding:20px;
+        color:#6b7280;">
+
+            © 2026 FinTrack
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="/javascript/setting.js"></script>
+
+<script src="/javascript/app.js"></script>
+
+</body>
+</html>
